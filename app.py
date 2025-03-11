@@ -32,9 +32,9 @@ def check_password_strength(password: str) -> tuple[str, str, list[str]]:
         feedback.append("❌ Include at least one special character (!@#$%^&*).")
     
     # Password strength Rating
-    if score == 5:
+    if score == 4:
         return "✅ Strong Password!", "green", feedback
-    elif score >= 3:
+    elif score > 2:
         return "⚠️ Moderate Password - Consider adding more security features.", "orange", feedback
     else:
         return "❌ Weak Password - Improve it using the suggestions above.", "red", feedback
